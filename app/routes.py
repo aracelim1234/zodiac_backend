@@ -1,16 +1,8 @@
-# from flask.helpers import flash
-# from flask.wrappers import Response
 from app import db
 from app.models.user import User
 from flask import Blueprint, json, request, make_response, jsonify, render_template, url_for
-# from datetime import datetime
 from dotenv import load_dotenv
-# import os
-# import requests
-from flask_login import login_user, logout_user, login_required, current_user
-# from flask_wtf import FlaskForm
-# from wtforms import StringField, PasswordField, SubmitField
-# from wtforms.validators import InputRequired, Length, ValidationError
+from flask_login import login_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
 
 users_bp = Blueprint("users", __name__)
